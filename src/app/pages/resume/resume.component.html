@@ -1,0 +1,100 @@
+<section class="w-full">
+    <section
+        class="flex flex-col md:flex-row md:justify-between bg-colorPrimary-600 p-5 rounded-md gap-5 animate-fade-right animate-once animate-ease-out"
+    >
+        <div class="md:w-64 w-full gap-3 flex md:flex-col text-colorBgS-500">
+            <h1 class="text-2xl">Luis Enrique</h1>
+            <h2 class="text-lg text-colorBgP-700">FullStack Developer</h2>
+        </div>
+
+        <div class="text-lg text-center md:text-start text-colorBgS-500">
+            <p>Un año de experiencia como Front-end</p>
+            <p>Experiencia en desarrollo Web mobile firts</p>
+            <p>Codigo limpio y reutilizable</p>
+        </div>
+    </section>
+
+    <div
+        style="
+            border-radius: 29px;
+            box-shadow: 12px 12px 25px #121617, -12px -12px 25px #242e2f;
+        "
+        class="flex flex-col m-5 p-5 gap-10 rounded-md animate-fade-right animate-once animate-ease-in-out"
+    >
+        <h1 class="text- text-colorBgS-500">Herramientas Front-end</h1>
+
+        <div
+            class="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-7 xl:flex xl:flex-row gap-5"
+        >
+            <ng-container *ngFor="let front of front">
+                <div class="group flex relative">
+                    <img
+                        class="w-16 md:w-20 grayscale hover:grayscale-0 object-contain"
+                        src="{{ front.img }}"
+                        alt=""
+                    />
+                    <span
+                        class="group-hover:opacity-100 transition-opacity bg-gray-700 px-1 text-sm text-gray-100 rounded-md absolute left-1/2 -top-16 -translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto"
+                        >{{ front.name }}</span
+                    >
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+    <div
+        style="
+            border-radius: 29px;
+            box-shadow: 12px 12px 25px #121617, -12px -12px 25px #242e2f;
+        "
+        class="flex flex-col p-5 m-5 gap-10 rounded-md animate-fade-right animate-once animate-ease-in-out"
+    >
+        <h1 class="text- text-colorBgS-500">Herramientas Back-end</h1>
+
+        <div
+            class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 xl:flex xl:flex-row gap-5"
+        >
+            <ng-container *ngFor="let back of back">
+                <div class="group flex relative">
+                    <img
+                        class="w-20 grayscale hover:grayscale-0 object-contain"
+                        src="{{ back.img }}"
+                        alt=""
+                    />
+                    <span
+                        class="group-hover:opacity-100 transition-opacity bg-gray-700 px-1 text-sm text-gray-100 rounded-md absolute left-1/2 -top-16 -translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto"
+                        >{{ back.name }}</span
+                    >
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+    <div
+        style="
+            border-radius: 29px;
+            box-shadow: 12px 12px 25px #121617, -12px -12px 25px #242e2f;
+        "
+        class="flex flex-col m-5 p-5 gap-10 my-10 rounded-md animate-fade-right animate-once animate-ease-in-out"
+    >
+        <h1 class="text- text-colorBgS-500">Otras Herramientas...</h1>
+
+        <div
+            class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 xl:flex xl:flex-row gap-5"
+        >
+            <ng-container *ngFor="let others of others">
+                <div class="group flex relative">
+                    <img
+                        class="w-20 grayscale hover:grayscale-0 object-contain"
+                        src="{{ others.img }}"
+                        alt=""
+                    />
+                    <span
+                        class="group-hover:opacity-100 transition-opacity bg-gray-700 px-1 text-sm text-gray-100 rounded-md absolute left-1/2 -top-16 -translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto"
+                        >{{ others.name }}</span
+                    >
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,251 @@
+<header class="flex justify-between flex-wrap items-center h-16">
+    <a
+        [routerLink]="['']"
+        class="w-8 fill-white m-5 rounded-full p-1 stroke-colorPrimary-500 hover:rotate-12"
+    >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.13 164.56">
+            <g id="Capa_2" data-name="Capa 2">
+                <g id="Capa_1-2" data-name="Capa 1">
+                    <path
+                        d="M0,0H24.18V149.06H15.49V8.45h-7V156.11H85.68V133.57H47.42v-8.45H94.13v39.44H0ZM31.93,0h8.44V140.38h37.8v8.68H31.93Z"
+                    />
+                </g>
+            </g>
+        </svg>
+    </a>
+
+    <a
+        *ngIf="!active; else close"
+        (click)="setClick()"
+        class="md:hidden w-10 bg-colorBgS-500 rounded-full p-2 stroke-colorPrimary-500 m-5"
+    >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-menu-2"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M4 6l16 0"></path>
+            <path d="M4 12l16 0"></path>
+            <path d="M4 18l16 0"></path>
+        </svg>
+    </a>
+
+    <ng-template #close>
+        <a
+            (click)="setClick()"
+            class="md:hidden w-10 bg-colorBgS-500 rounded-full p-2 stroke-colorPrimary-500 m-5"
+            ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-x"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M18 6l-12 12"></path>
+                <path d="M6 6l12 12"></path></svg
+        ></a>
+    </ng-template>
+
+    <nav class="hidden w-full md:w-auto md:flex md:gap-2 text-colorBgS-500 p-5">
+        <a
+            href=""
+            [routerLink]="['/projects']"
+            class="flex items-center text-lg font-semibold p-1 hover:rotate-6 hover:bg-colorBgP-500 hover:text-colorPrimary-500 hover:shadow-lg hover:shadow-colorBgP-700"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-file-code-2"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M10 12h-1v5h1"></path>
+                <path d="M14 12h1v5h-1"></path>
+                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                <path
+                    d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
+                ></path></svg
+            >Proyectos</a
+        >
+
+        <a
+            [routerLink]="['/resume']"
+            class="flex items-center text-lg font-semibold p-1 hover:rotate-6 hover:bg-colorBgP-500 hover:text-colorPrimary-500 hover:shadow-lg hover:shadow-colorBgP-700 w-auto"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-file-cv"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                <path
+                    d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
+                ></path>
+                <path
+                    d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0"
+                ></path>
+                <path d="M13 11l1.5 6l1.5 -6"></path>
+            </svg>
+            Resumen</a
+        >
+    </nav>
+
+    <nav
+        id="menu"
+        class="w-full bg-colorPrimary-600 z-10 flex h-0 flex-col hidden items-center justify-between p-10 transition-all ease-linear duration-300 pointer-events-auto"
+    >
+        <div class="flex flex-col gap-5 text-colorPrimary-50">
+            <a
+                href=""
+                [routerLink]="['/projects']"
+                class="flex w-full items-center text-lg font-semibold p-1"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-file-code-2"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M10 12h-1v5h1"></path>
+                    <path d="M14 12h1v5h-1"></path>
+                    <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                    <path
+                        d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
+                    ></path></svg
+                >Proyectos</a
+            >
+
+            <a
+                [routerLink]="['/resume']"
+                class="flex items-center text-lg font-semibold p-1"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-file-cv"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                    <path
+                        d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
+                    ></path>
+                    <path
+                        d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0"
+                    ></path>
+                    <path d="M13 11l1.5 6l1.5 -6"></path>
+                </svg>
+                Resumen</a
+            >
+        </div>
+
+        <div class="flex gap-4">
+            <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/luis-enr-diaz-garcia/"
+                class="w-7 hover:rotate-12 stroke-colorBgS-500"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-brand-linkedin"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                        d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                    ></path>
+                    <path d="M8 11l0 5"></path>
+                    <path d="M8 8l0 .01"></path>
+                    <path d="M12 16l0 -5"></path>
+                    <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+                </svg>
+            </a>
+
+            <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/LuisEnrDiaz"
+                class="w-7 hover:rotate-12 stroke-colorBgS-500"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-brand-github"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                        d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                    ></path>
+                </svg>
+            </a>
+
+            <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="mailto:luisenrique0020@gmail.com"
+                class="w-7 hover:rotate-12 stroke-colorBgS-500"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-mail"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                        d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
+                    ></path>
+                    <path d="M3 7l9 6l9 -6"></path>
+                </svg>
+            </a>
+        </div>
+    </nav>
+</header>
