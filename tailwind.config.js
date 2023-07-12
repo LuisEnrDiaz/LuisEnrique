@@ -59,9 +59,9 @@ module.exports = {
             },
 
             boxShadow: {
-                body: "rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;",
-                card: "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;",
-                rgb: "rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;",
+                body: "rgba(0, 0, 0, 0.56) 0px 22px 70px 4px",
+                card: "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px",
+                rgb: "rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px",
             },
 
             keyframes: {

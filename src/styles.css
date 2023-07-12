@@ -3,14 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
-*/
 /* Aquí definimos las Custom properties */
-:root {
-    --negro: #393939;
+/* :root { */
+/* --negro: #393939;
     /* Tipografía */
-    --tipo-principal: bubblegum;
-    --tipo-secundaria: Verdana;
-}
+/* --tipo-principal: bubblegum; */
+/* --tipo-secundaria: Verdana; */
+/* } */
 
 @font-face {
     font-family: kenyan;
@@ -43,18 +42,7 @@
         --negro: #ececec;
     }
 }
-/* Opcional */
-/* Configuramos si un usuario ha activado el modo alto contraste. (WD) */
-/* Opcional */
-/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        -webkit-animation: none !important;
-        animation: none !important;
-        -webkit-transition: none !important;
-        transition: none !important;
-    }
-}
+
 /* Reseteamos los margin y paddings de todas las etiquetas */
 * {
     margin: 0;
@@ -137,16 +125,6 @@ q:after {
     content: none;
 }
 
-/* Configuramos el texto que seleccionamos */
-::-moz-selection {
-    background-color: var(--negro);
-    color: var(--blanco);
-}
-::selection {
-    background-color: var(--negro);
-    color: var(--blanco);
-}
-
 /* Nivelamos problemas de tipografías y colocación de formularios */
 form,
 input,
@@ -193,7 +171,7 @@ body {
     min-height: 100vh;
     font-size: 100%;
     font-family: coolvetica, kenyan, coffee;
-    color: var(--negro);
+
     /* opcional */
     line-height: 1.4em;
     /* opcional */

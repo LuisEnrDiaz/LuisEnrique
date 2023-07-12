@@ -2,42 +2,21 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Portfolio</title>
+        <title>Luis Enrique Portfolio</title>
         <base href="/" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/x-icon" href="favicon.ico" />
-        <meta name="view-transition" content="same-origin" />
+
+        <link rel="icon" type="image/x-icon" href="./assets/favicon.svg" />
         <link
             href="https://unpkg.com/aos@2.3.1/dist/aos.css"
             rel="stylesheet"
         />
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </head>
     <body>
         <app-root></app-root>
-        <script>
-            AOS.init();
-        </script>
-        <!-- <script>
-            window.navigation.addEventListener("navigate", (event) => {
-                const toUrl = new URL(event.destination.url);
-
-                if (location.origin !== toUrl.origin) return;
-
-                event.intercept({
-                    async handler() {
-                        const response = await fetch(toUrl.pathname);
-                        const text = await response.text();
-
-                        const [, data] = text.match(/<body>([\s\S]*)<\/body>/i);
-
-                        document.startViewTransition(() => {
-                            document.body.innerHTML = data;
-                            document.documentElement.scrollTop = 0;
-                        });
-                    },
-                });
-            });
-        </script> -->
     </body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </html>
