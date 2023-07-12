@@ -24,7 +24,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
         DetailsProjectComponent,
         AboutUsComponent,
     ],
-    imports: [AppRoutingModule],
+    imports: [BrowserModule, AppRoutingModule],
     providers: [],
     bootstrap: [AppComponent],
 })
